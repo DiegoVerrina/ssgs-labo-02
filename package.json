@@ -5,25 +5,26 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": ["nodejs",
+    "test": "jest --coverage"  },
+  "keywords": [
+    "nodejs",
     "stringhe",
     "esercizi",
     "javascript",
     "laboratorio",
     "funzioni",
-    "ssgs"],
+    "ssgs"
+  ],
   "author": "Diego Verrina",
   "license": "ISC",
-    "devDependencies": {
+  "devDependencies": {
     "jest": "^29.7.0"
-     },
+  },
   "repository": {
     "type": "git",
-    "homepage": "https://github.com/DiegoVerrina/ssgs-labo-02"},
-
-    "bugs": {
+    "homepage": "https://github.com/DiegoVerrina/ssgs-labo-02"
+  },
+  "bugs": {
     "url": "https://github.com/DiegoVerrina/ssgs-labo-02/issues"
-  } 
+  }
 }
