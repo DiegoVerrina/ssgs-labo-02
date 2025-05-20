@@ -1,12 +1,29 @@
 {
   "name": "labo-string",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "Un semplice progetto Node.js per esercitarsi con le funzioni sulle stringhe.",
+  "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["nodejs",
+    "stringhe",
+    "esercizi",
+    "javascript",
+    "laboratorio",
+    "funzioni",
+    "ssgs"],
+  "author": "Diego Verrina",
+  "license": "ISC",
+    "devDependencies": {
+    "jest": "^29.7.0"
+     },
+  "repository": {
+    "type": "git",
+    "homepage": "https://github.com/DiegoVerrina/ssgs-labo-02"},
+
+    "bugs": {
+    "url": "https://github.com/DiegoVerrina/ssgs-labo-02/issues"
+  } 
 }
