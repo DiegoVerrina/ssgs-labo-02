@@ -2,9 +2,9 @@ name: CI & Coverage
 
 on:
   push:
-    branches: main, feature/ci-workflow-coverage
+    branches: -main, feature/ci-workflow-coverage
   pull_request:
-    branches: main
+    branches: -main
   workflow_dispatch:
 
 jobs:
