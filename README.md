@@ -114,3 +114,34 @@ Match con regex
 npm start -- regex-match "abc123" --regex "^[a-z]+[0-9]+$"
 ```
 # Output: "true"
+
+## Testing
+Il progetto include una suite di test automatizzati per verificare il corretto funzionamento delle varie funzionalità della CLI. I test sono scritti utilizzando Jest (o un altro framework, se diverso: verifica nella cartella package.json o nella directory tests).
+
+Per eseguire i test in locale:
+
+```bash
+npm test
+```
+Assicurati che tutte le dipendenze siano installate (npm install) prima di lanciare i test.
+
+## Pipeline CI
+Il repository utilizza GitHub Actions per l’integrazione continua (CI). Ad ogni push o pull request sulla branch principale, viene avviata una pipeline automatica che esegue i seguenti step:
+
+Installazione delle dipendenze: viene eseguito npm install.
+Linting e controllo del codice: se configurato, viene effettuato il controllo dello stile e della qualità del codice.
+Esecuzione dei test: vengono lanciati tutti i test automatici per assicurarsi che nessuna funzionalità sia stata compromessa.
+Questo processo garantisce che il codice sia sempre stabile e funzionante, riducendo il rischio di introdurre bug o regressioni.
+
+Puoi consultare lo stato della pipeline CI nella sezione "Actions" del repository su GitHub.
+
+## Segnalazione Bug e Issue
+Se riscontri un bug, un comportamento inatteso o desideri proporre una nuova funzionalità, ti invitiamo ad aprire una issue su GitHub. Segui questi semplici passaggi:
+
+Vai alla sezione Issues del repository.
+Clicca su “New issue”.
+Descrivi dettagliatamente il problema, includendo se possibile:
+Comando utilizzato e output ricevuto
+Sistema operativo e versione di Node.js
+Passaggi per riprodurre l’errore
+Le segnalazioni sono fondamentali per migliorare il progetto! Puoi anche consultare le issue aperte e chiuse per vedere se il problema è già stato segnalato o risolto.
