@@ -1,30 +1,116 @@
-# Labo-String: CLI per Utilità su Stringhe
+# Labo-String
 
-Questo progetto fornisce una base per una semplice Command-Line Interface (CLI) Node.js che offre diverse utilità per la manipolazione di stringhe.
+**Labo-String** è una Command-Line Interface (CLI) sviluppata in Node.js per la manipolazione e l’analisi di stringhe. Il progetto offre numerose funzionalità utili sia in ambito didattico che pratico, facilitando operazioni comuni sulle stringhe direttamente da terminale.
 
-## Nota Importante per lo Studente - Setup Iniziale del Progetto
+## Sommario
 
-Benvenuto/a a `labo-string`!
-
-Questo repository è un **template di partenza** per il tuo laboratorio valutato. Come avrai modo di leggere nelle istruzioni del laboratorio, una parte fondamentale del tuo lavoro iniziale (Esercizio 1) consisterà nell'analizzare attentamente la struttura e la configurazione corrente di questo progetto.
-
-**Potresti notare che alcuni aspetti della configurazione iniziale – inclusa questa stessa documentazione (`README.md`), il file `package.json` e la gestione dei file da ignorare (`.gitignore`) – sono stati volutamente lasciati incompleti o potrebbero non seguire tutte le best practice per un progetto Node.js.**
-
-Il tuo primo compito sarà proprio quello di identificare queste aree di miglioramento e apportare le necessarie correzioni e completamenti, come dettagliato nelle istruzioni del laboratorio, per portare il progetto a uno standard qualitativo superiore.
-
-Buona analisi e buon lavoro!
-
-## Funzionalità Principali (Previste)
-
-* Inversione di una stringa.
-* Verifica se una stringa è palindroma.
-* Troncamento di una stringa a una lunghezza massima specificata.
-* Conteggio delle occorrenze di ciascun carattere in una stringa.
-
-## Installazione e Avvio
-
-*(Questa sezione dovrà essere completata dallo studente come parte dell'Esercizio 1, includendo i comandi per installare le dipendenze ed eseguire l'applicazione e i test).*
+- [Descrizione](#descrizione)
+- [Funzionalità](#funzionalità)
+- [Installazione](#installazione)
+- [Utilizzo](#utilizzo)
+- [Esempi di Comando](#esempi-di-comando)
+- [Struttura del Progetto](#struttura-del-progetto)
+- [Testing](#testing)
+- [Requisiti](#requisiti)
+- [Contributi](#contributi)
+- [Licenza](#licenza)
 
 ---
 
-*Suggerimento: Presta particolare attenzione ai requisiti dell'Esercizio 1 del laboratorio per completare e correggere questo README e gli altri file di configurazione.*
+## Descrizione
+
+Labo-String nasce come progetto didattico per esercitarsi con Node.js e la realizzazione di strumenti CLI. La sua modularità e semplicità lo rendono facilmente estendibile con nuove funzionalità.
+
+Le operazioni offerte dal tool sono utili per chiunque debba manipolare o analizzare stringhe in modo rapido, senza ricorrere a IDE o editor di testo, ma semplicemente utilizzando il terminale.
+
+## Funzionalità
+
+Il progetto mette a disposizione i seguenti comandi:
+
+- **Inverti**: Restituisce la versione invertita di una stringa.
+- **Palindromo**: Verifica se la stringa fornita è palindroma (uguale letta da sinistra a destra e viceversa).
+- **Tronca**: Tronca la stringa a una lunghezza massima specificata, eventualmente aggiungendo un suffisso.
+- **Conta caratteri**: Conta le occorrenze di ogni carattere presente in una stringa.
+- **Conta parole**: Conta il numero di parole presenti in una stringa.
+- **Rimuovi spazi**: Elimina tutti gli spazi dalla stringa.
+- **Uppercase/Lowercase**: Converte la stringa tutta in maiuscolo o minuscolo.
+- **Regex match**: Permette di verificare se una stringa soddisfa una determinata espressione regolare (regex).
+
+*Nota: alcune funzionalità potrebbero essere in fase di sviluppo ed evoluzione.*
+
+## Installazione
+
+Assicurati di avere [Node.js](https://nodejs.org/) (versione 14.x o superiore) installato sul tuo sistema.
+
+1. Clona il repository:
+
+    ```bash
+    git clone https://github.com/DiegoVerrina/ssgs-labo-02.git
+    cd ssgs-labo-02
+    ```
+
+2. Installa le dipendenze:
+
+    ```bash
+    npm install
+    ```
+
+## Utilizzo
+
+Puoi eseguire la CLI tramite il comando:
+
+```bash
+npm start -- <comando> [opzioni]
+```
+Oppure direttamente con Node.js:
+
+```bash
+node src/index.js <comando> [opzioni]
+```
+Per vedere l’elenco completo dei comandi e delle opzioni disponibili:
+
+```bash
+npm start -- --help
+```
+oppure
+
+```bash
+node src/index.js --help
+```
+Esempi di Comando
+Invertire una stringa
+
+```bash
+npm start -- inverti "Ciao mondo"
+```
+# Output: "odnom oaiC"
+Verificare se una stringa è palindroma
+
+```bash
+npm start -- palindromo "anna"
+```
+# Output: "La stringa è palindroma"
+Troncare una stringa a 5 caratteri
+
+```bash
+npm start -- tronca "programmazione" --max 5 --suffisso "..."
+```
+# Output: "progr..."
+Contare le occorrenze dei caratteri
+
+```bash
+npm start -- conta-caratteri "test"
+```
+# Output: "t: 2, e: 1, s: 1"
+Contare le parole in una stringa
+
+```bash
+npm start -- conta-parole "Questo è un test"
+```
+# Output: "4"
+Match con regex
+
+```bash
+npm start -- regex-match "abc123" --regex "^[a-z]+[0-9]+$"
+```
+# Output: "true"
